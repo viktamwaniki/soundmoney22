@@ -14,8 +14,8 @@
     color: transparent;
 }
 
-body {
-    color: black;
+.body {
+    backgroun-color: black;
 }
 
 a:link {
