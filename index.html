@@ -3,42 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoundMoney Presale</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SoundMoney</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showForm() {
+            document.getElementById('formContainer').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#how-to-buy">How to Buy?</a>
-            <a href="#wallet">Soundmoney Wallet</a>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="header">
-                <h1>SoundMoney</h1>
-                <p>Presale is live</p>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 86%;"></div>
-                </div>
-            </div>
-            <div class="details">
-                <p>Raised: $6</p>
-                <p>Target: $7,500,000</p>
-                <p>1 SCAPE: $0.00376</p>
-                <p>Listing Price: $0.01 (165.96%)</p>
-                <p>Next Price: $0.00433 (+15.16%)</p>
-            </div>
-            <div class="purchase">
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" name="amount">
-                <label for="payment-method">Payment Method:</label>
-                <select id="payment-method" name="payment-method">
-                    <option value="ETH">ETH</option>
-                </select>
-                <button>Connect Wallet</button>
-            </div>
-        </div>
-    </main>
+    <div class="welcome-section">
+        <h1>SoundMoney</h1>
+        <p>Step into a world where your love for music not only enriches your soul but also fills your pockets. Welcome to SoundMoney, where every beat, every note, and every second of your digital consumption becomes a pathway to financial empowerment. This is more than just an opportunity—it's a revolution waiting for you to join.</p>
+        <button onclick="showForm()" class="connect-wallet">Connect Wallet</button>
+    </div>
+    <div class="form-container" id="formContainer" style="display:none;">
+        <form>
+            <input type="text" placeholder="Enter your wallet address">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
