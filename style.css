@@ -20,6 +20,29 @@ html, body {
     z-index: 1000;
 }
 
+.header-content {
+    background-color: #222; /* Dark background for the header */
+    color: #fff;
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Center-align the text */
+}
+
+.current-price {
+    font-size: 24px; /* Larger font size for the current price */
+    font-weight: bold; /* Make the current price bold */
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-around; /* Space out the listing and next prices */
+    margin-top: 5px; /* Margin top for spacing */
+}
+
+.price-info p {
+    font-size: 16px; /* Smaller font size for additional price info */
+    color: #7fff00; /* Bright green color for emphasis */
+}
+
 .topnav a {
     float: left;
     color: #f2f2f2;
