@@ -1,124 +1,527 @@
-/* General styles for the entire page */
-html, body {
-    height: 100%;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #56ab2f, #00aeef); /* Green to blue gradient */
-    color: #fff;
-    text-align: center;
-}
-
-/* Top navigation bar styles */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-content {
-    background-color: #222; /* Dark background for the header */
-    color: #fff;
-    padding: 10px 20px; /* Padding around the text */
-    text-align: center; /* Center-align the text */
-}
-
-.current-price {
-    font-size: 24px; /* Larger font size for the current price */
-    font-weight: bold; /* Make the current price bold */
-}
-
-.price-info {
-    display: flex;
-    justify-content: space-around; /* Space out the listing and next
-
- prices */
-    margin-top: 5px; /* Margin top for spacing */
-    padding: 10px; /* Padding inside the price info box */
-    background-color: #333; /* Darker background for contrast */
-    border-radius: 20px; /* Rounded corners */
-    width: 60%; /* Smaller width for the price info box */
-    margin: 10px auto; /*
-
-.price-info p {
-    font-size: 16px; /* Smaller font size for additional price info */
-    color: #7fff00; /* Bright green color for emphasis */
-}
-
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.connect-wallet {
-    float: right;
-    background-color: #0084ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Main section styles */
-.welcome-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1 0 auto; /* Flexibility for filling available space */
-}
-
-p {
-    max-width: 600px;
-}
-
-/* Form container styles */
-.form-container {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    margin: auto;
-}
-
-form input[type="text"], form input[type="submit"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-form input[type="submit"] {
-    background-color: #56ab2f;
-    color: white;
+body {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background: linear-gradient(to right, #17fd03, #00fdc6); /* Gradient from green to blue */
+    color: white; /* Sets text color to white for better readability */
+    font-family: Arial, sans-serif; /* Sets a clean, modern font */
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #252540; /* Same background color as main content */
+}
+
+.logo-container {
+    width: 40%; /* Takes the remaining 40% of the container width */
+    text-align: right; /* Aligns the logo to the right */
+    padding: 20px;
+}
+
+.logo-text {
+    font-size: 44px; /* Large size for visibility */
+    font-weight: bold; /* Bold text for emphasis */
+    background: linear-gradient(to right, #000000, #ff1201); /* Example gradient from purple to blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text color transparent, showing the background */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Required for background clip to work properly */
+}
+
+.menu-toggle {
+    background: none;
     border: none;
     cursor: pointer;
 }
 
-/* Footer styles */
-.footer {
-    background-color: #333;
+.menu-toggle img {
+    width: 30px; /* Adjust based on your preference */
+    height: 30px; /* Keep it square */
+}
+
+#menu {
+    display: none;
+    /* Style your menu here */
+}
+
+.logo {
+    height: 50px; /* Adjust based on your actual logo size */
+}
+
+.welcome-section {
+    width: 60%; /* Takes 60% of the container width, adjust as necessary */
+    color: white; /* Ensure text is readable on dark background */
+    padding: 20px;
+} 
+
+.token-container {
+    background-color: #252540;
     color: white;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 0px; /* Sets a max-width for the content */
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Adds padding inside the container */
+}
+
+/* Additional styles for other elements can be added here */
+
+
+header {
+
+    position: fixed;
+    color: #fc0f0f;
+    padding: 1rem;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #17fd03, #00fdc6);
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+
+.topnavlinks {
+    margin-right: 2px; /* Adds margin to the right of each link */
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets the color of the text */
+    position: relative;
+    align-content: flex-start;
+    top: 0px;
+    left: 0px;
+    margin-left: 2px;
+}
+
+.header-container {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Distributes space between items */
+    padding: 10px 20px;; /* Adds horizontal padding */ /* Assuming a dark theme from the screenshot */
+    color: #fff;
+}
+
+main {
+    padding-top: 10px; /* Adjust this value based on the height of your header */
+    background-color: rgb(255, 255, 255);
+}
+
+main {
+    background-color: #1E1E2D;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 100px auto; /* Centers the container and moves it below the header */
+}
+
+.token-container {
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #252540;
+    text-align: center;
+}
+
+h1 {
+    color: #C5C6C7;
+}
+
+.status {
+    color: #44C776; /* Green color for live status */
+    font-weight: bold;
+}
+
+.live-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #44C776;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.funding-info {
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: #C5C6C7;
+}
+
+.token-pricing p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.payment-method {
+    margin: 20px 0;
+}
+
+#payment-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.connect-wallet-btn {
+    background-color: #E63946;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.connect-wallet-btn:hover {
+    background-color: #D62839;
+}
+
+.instructions a {
+    color: #6C63FF;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+.instructions a:hover {
+    text-decoration: underline;
+}
+
+
+.hero {
+    background-color: #fcfcfc;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.h11 {
+    font-family: var;
+    max-width: 807px;
+    font-size: 2.5rem;
+    line-height: 1.09;
+    font-weight: var;
+    color: black;
+    position: relative;
+    
+}
+
+.h12 {
+    background: rgb(5, 140, 250);
+    color: rgb(4, 252, 16);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+}
+
+
+
+.cta-button {
+    background-color: #fff;
+    color: #0973d6;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Button styling */
+.buybtn, .chakra-button {
+    padding: 8px 16px; /* Sets padding inside the button */
+    background-color: #007BFF; /* Background color for buttons */
+    color: white; /* Text color */
+    border: none; /* Removes border */
+    border-radius: 4px; /* Rounds the corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    text-decoration: none; /* Removes underline from buttons if they are links */
+}
+
+.buybtn:hover, .chakra-button:hover {
+    background-color: #0056b3; /* Darkens the button on hover */
+}
+
+.css-bvtgz6 {
+    display: inline-flex;
+    appearance: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    line-height: 1.2;
+    font-weight: var(--chakra-fontWeights-semibold);
+    transition-property: var(--chakra-transition-property-common);
+    transition-duration: var(--chakra-transition-duration-normal);
+    border-radius: 24px;
+    background: var(--chakra-colors-white);
+    color: var(--chakra-colors-brand-black);
+    border: var(--chakra-borders-none);
+    min-width: fit-content;
+    font-size: var(--chakra-fontSizes-sm);
+    height: 30px;
+    padding-inline-start: var(--chakra-space-2);
+    padding-inline-end: var(--chakra-space-2);
+    text-transform: capitalize;
+}
+
+.cta-button:hover {
+    background-color: #ff8363;
+}
+
+.features, .presale-info {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.features h3, .presale-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.features ul {
+    list-style: none;
+}
+
+.features li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
     text-align: center;
     padding: 10px;
-    width: 100%;
-    flex-shrink: 0; /* Keeps footer size constant */
+    background-color: #333;
+    color: white;
+}
+
+
+
+.css-8uodfg {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-top: var(--chakra-space-3);
+    padding-bottom: var(--chakra-space-3);
+    border-bottom: var(--chakra-borders-none);
+}
+
+.css-dd7sju {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: var(--chakra-space-3);
+    background: #18161b;
+    height: 28px;
+    border-radius: 20px;
+    -webkit-padding-start: var(--chakra-space-4);
+    padding-inline-start: var(--chakra-space-4);
+    -webkit-padding-end: var(--chakra-space-4);
+    padding-inline-end: var(--chakra-space-4);
+}
+
+.css-18ucy8c {
+    color: #91EB4A;
+}
+
+.css-dd7sju {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: var(--chakra-space-3);
+    background: #18161b;
+    height: 28px;
+    border-radius: 20px;
+    -webkit-padding-start: var(--chakra-space-4);
+    padding-inline-start: var(--chakra-space-4);
+    -webkit-padding-end: var(--chakra-space-4);
+    padding-inline-end: var(--chakra-space-4);
+}
+
+.css-6835uz {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: var(--chakra-space-4);
+}
+
+.css-1hpkso3 {
+    height: 28px;
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+}
+
+.css-1cnoev4 {
+    font-size: var(--chakra-fontSizes-sm);
+    color: white;
+}
+
+.css-18ucy8c {
+    color: #91EB4A;
+}
+
+.css-1n7w2s2 {
+    color: white;
+    font-weight: var(--chakra-fontWeights-medium);
+    font-size: var(--chakra-fontSizes-sm);
+    text-transform: uppercase;
+}
+
+.css-2p5qtx {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: var(--chakra-space-3);
+    height: 28px;
+    border: 1px solid transparent;
+    background: linear-gradient(#0E0C10, #0E0C10) padding-box, linear-gradient(90deg, #F96544 0%, #F93655 0%, #C548B9 57%);
+    border-radius: 20px;
+    -webkit-padding-start: var(--chakra-space-4);
+    padding-inline-start: var(--chakra-space-4);
+    -webkit-padding-end: var(--chakra-space-4);
+    padding-inline-end: var(--chakra-space-4);
+}
+
+.css-gxt9bh {
+    color: white;
+    background: linear-gradient(225deg, #F96544 0%, #F93655 25.5%, #C548B9 57%, #8E49E9 88%), linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: var(--chakra-fontWeights-medium);
+    font-size: var(--chakra-fontSizes-sm);
+    text-transform: uppercase;
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+}
+
+/* Base style for the container */
+.chakra-stack {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #333; /* Background color for visibility */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between stacks */
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-around;
+}
+
+/* Style for text */
+.chakra-text {
+    font-size: 16px; /* Sets a standard text size */
+    margin: 0 10px; /* Adds horizontal margin */
+}
+
+/* Additional style for labels to differentiate from values */
+.css-1n7w2s2 {
+    color: #aaa; /* Light grey color for labels */
+    font-weight: bold;
+}
+
+/* Style for the numbers, slightly larger */
+.css-1cnoev4 {
+    font-size: 0.9em; /* Slightly larger than labels */
+    color: #ddd; /* Light white for better readability */
+    flex-grow: 1; /* Allows these elements to take up extra space */
+    text-align: center; /* Centers the text */
+}
+
+/* Span within the price, to highlight the percentage changes */
+.css-18ucy8c {
+    color: #4CAF50; /* Green to signify increase, change if needed */
+    font-weight: normal;
+}
+
+/* Specific adjustments for the "Price now" */
+.css-gxt9bh {
+    font-weight: bold;
+    color: #FFC107; /* Amber color to highlight current price */
+}
+.css-6835uz {
+    flex-direction: column; /* Stacks child elements vertically */
+}
+
+.css-dd7sju, .css-2p5qtx {
+    flex-direction: row; /* Changes direction to horizontal */
 }
